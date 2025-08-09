@@ -4,7 +4,7 @@ import { relations } from 'drizzle-orm'
 export const files = pgTable('files', {
     id: uuid('id').defaultRandom().primaryKey(),
 
-    //basic file/folder infp
+    //basic file/folder info
     name: text('name').notNull(),
     path: text('path').notNull(), // /doc/proj/abc.pdf
     size: integer('size').notNull(),

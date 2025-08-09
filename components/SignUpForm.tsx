@@ -24,7 +24,7 @@ export default function SignUpForm() {
     const {
         register,
         handleSubmit,
-        formState: {errors},
+        formState: { errors },
     } = useForm<z.infer<typeof signUpSchema>>({
         resolver: zodResolver(signUpSchema),
         defaultValues: {
@@ -48,7 +48,7 @@ export default function SignUpForm() {
                 strategy: 'email_code'
             })
             setVerifying(true)
-        } catch (error:any) {
+        } catch (error: any) {
             console.log('SignUp error: ', error)
             setAuthError(
                 error.errors?.[0]?.message || 'An error occured during signUp. Please try again'
@@ -81,7 +81,7 @@ export default function SignUpForm() {
                     'Verification could not be completed'
                 )
             }
-        } catch (error:any) {
+        } catch (error: any) {
             console.log('Verification error: ', error)
             setVerificationError(
                 error.errors?.[0]?.message || 'An error occured during Verification. Please try again'
@@ -96,4 +96,5 @@ export default function SignUpForm() {
             <h1>this is OTP entering field</h1>
         )
     }
-    return <h1>SignUp form with email and other fields</h1>
+    return (<h1>SignUp form with email and other fields </h1>)
+}

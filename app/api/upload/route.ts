@@ -2,8 +2,7 @@ import { auth } from "@clerk/nextjs/server";
 import { db } from "@/lib/db";
 import { files } from "@/lib/db/schema";
 import { NextRequest, NextResponse } from "next/server";
-import { size } from "zod";
-import { use } from "react";
+
 
 export async function POST(request: NextRequest) {
     try {
